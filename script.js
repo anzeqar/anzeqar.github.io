@@ -5,19 +5,20 @@ fetch(
     const projectsSection = document.querySelector(".projects-section");
     let projectNames = ``;
     for (let i = 0; i < res.length; i++) {
-      projectNames += `<button col-6 class="btn btn-dark m-2">
+      projectNames += `
+      <button col-6 class="btn btn-dark shadow m-2">
       <div class='p-1'></div>
         <a
           href="${res[i].url}"
           target="_blank"
           class="text-warning h4 ms-auto text-decoration-none"
         >
-          ${res[i].name}</a
-        >
+          ${res[i].name}
         <hr>
-        <p class=''>${res[i].tech}</p>
-        <p class=''>${res[i].summary}</p>
-        
+        <p class='text-info h6'>${res[i].tech}</p>
+        <p class='text-light h6'>${res[i].summary}</p>
+        </a
+        >
       </button>
 `;
     }

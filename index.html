@@ -12,11 +12,11 @@
       crossorigin="anonymous"
     />
   </head>
-  <body style="scroll-behavior: smooth">
+  <body style="scroll-behavior: smooth" class="bg-dark text-light">
     <header class="header">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Anzeqar</a>
+          <a class="navbar-brand" href="#">Anzeqar's Website</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -30,9 +30,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="#whoami">Who am I ?</a>
-              <a class="nav-link" href="#projects">Projects</a>
-              <a class="nav-link" href="#social">Social Links</a>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a class="nav-link" href="#whoami">Who am I ?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#social">Social Links</a>
+              </li>
             </div>
           </div>
         </div>
@@ -50,28 +60,28 @@
           target="_blank"
           class="text-light text-decoration-none"
         >
-          <button class="btn btn-success m-2">About Me</button>
+          <button class="btn btn-outline-info m-2">About Me</button>
         </a>
         <a
           href="./skills.html"
           target="_blank"
           class="text-light text-decoration-none"
         >
-          <button class="btn btn-success m-2">My Skills</button>
+          <button class="btn btn-outline-info m-2">My Skills</button>
         </a>
         <a
           href="./assets/resume.pdf"
           target="_blank"
           class="text-light text-decoration-none"
         >
-          <button class="btn btn-success m-2">My resume</button>
+          <button class="btn btn-outline-info m-2">My resume</button>
         </a>
         <a
           href="./contact.html"
           target="_blank"
           class="text-light text-decoration-none"
         >
-          <button class="btn btn-success m-2">Contact Me</button>
+          <button class="btn btn-outline-info m-2">Contact Me</button>
         </a>
       </div>
     </div>
@@ -105,7 +115,7 @@
       ></div>
     </div>
     <div class="footer mt-4">
-      <p class="text-dark text-center" style="text-align: center">
+      <p class="text-light text-center" style="text-align: center">
         Developed by
         <span> </span>
         <a href="https://github.com/anzeqar" class="link-info" target="_blank"
@@ -119,5 +129,15 @@
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".navbar-nav>li>a").on("click", function () {
+        $(".navbar-collapse").collapse("hide");
+      });
+    </script>
   </body>
 </html>
